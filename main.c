@@ -412,22 +412,29 @@ void main(void)
 #include <stdio.h>
 void main(void)
 {
-	int k = 10000;
+	int k = 10;
 	printf("%d=", k);
 	for (int i = 2; i <= k; i++)
 	{
 		if ((k % i == 0))
 		{
 			k = k / i;
-			printf("%d*", i);
+			printf("%d", i);
 			i = 1;
+			if (k == 1)
+			{
+
+			}
+			else
+			{
+				printf("*");
+			}
 		}
 		else
 		{
 
 		}
 	}
-	printf("\b\t");
 	printf("\n");
 }
 */
