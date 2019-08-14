@@ -383,3 +383,27 @@ void main(void)
 	}
 }
 */
+/*
+//兔子数列，3月出生之后生兔子，起始时候一个刚出生的兔子
+#include <stdio.h>
+void main(void)
+{
+	int shengyvtuzi = 0, xinshengtuzi_1 = 1, xinshengtuzi_2 = 0, m = 0;
+	for (int i = 1; i <= 40; i++)
+	{
+		printf("%-10d", shengyvtuzi + xinshengtuzi_1 + xinshengtuzi_2);
+		shengyvtuzi = shengyvtuzi + xinshengtuzi_2;
+		xinshengtuzi_2 = xinshengtuzi_1;
+		xinshengtuzi_1 = shengyvtuzi;
+		if (i % 4 == 0)
+		{
+			printf("\n");
+			printf("%d\n",i);
+		}
+		else
+		{
+			printf("\t");
+		}
+	}
+}
+*/
