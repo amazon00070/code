@@ -219,3 +219,144 @@ void main(void)
 	}
 }
 *************/
+
+/*
+//水仙花数
+#include <stdio.h>
+#include <math.h>
+void main(void)
+{
+	for (int i = 100; i < 1000; i++)
+	{
+		if (i == pow((i / 100), 3) + pow(((i % 100) / 10), 3) + pow((i % 10), 3))
+		{
+			printf("%5d", i);
+		}
+		else
+		{
+
+		}
+	}
+}
+*/
+/*
+//首位相同的三位数
+#include <stdio.h>
+void main(void)
+{
+	for (int i = 100; i < 1000; i++)
+	{
+		static int a = 0;
+		if ((i / 100) == (i % 10))
+		{
+			printf("%5d", i);
+			a++;
+			if (a == 10)
+			{
+				printf("\n");
+				a = 0;
+			}
+			else
+			{
+
+			}
+		}
+		else
+		{
+
+		}
+	}
+}
+*/
+
+/*
+//显示2——10000之间的完全数
+#include <stdio.h>
+void main(void)
+{
+	for (int i = 2; i < 10000; i++)
+	{
+		int total = 0;
+		for (int j = 1; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				total = total + j;
+			}
+			else
+			{
+
+			}
+		}
+		if (total == i)
+		{
+			printf("%5d", i);
+		}
+		else
+		{
+
+		}
+	}
+}
+*/
+
+/*
+//穷举法解鸡兔问题
+#include <stdio.h>
+void main(void)
+{
+	int tou = 30, tui = 80;
+	for (int tu = 0; tu <= tou; tu++)
+	{
+		if (tu * 4 + (tou-tu) * 2 == tui)
+		{
+			printf("鸡%d，兔%d", (tou - tu), tu);
+		}
+		else
+		{
+
+		}
+	}
+}
+*/
+/*
+//马克思的男女花钱问题
+#include <stdio.h>
+void main(void)
+{
+	for (int nan = 0; nan <= 30; nan++)
+	{
+		for (int nv = 0; nv <= 30; nv++)
+		{
+			for (int xiao = 0; xiao <= 30; xiao++)
+			{
+				if ((nan * 3 + nv * 2 + xiao * 1 == 50) && (nan + nv + xiao == 30))
+				{
+					printf("男人%d，女人%d，小孩%d\n", nan, nv, xiao);
+				}
+			}
+		}
+	}
+}
+*/
+/*
+//100匹马100块瓦
+#include <stdio.h>
+void main(void)
+{
+	printf("大马\t小马\t马驹\n");
+	for (int dama = 0; dama <= 100; dama++)
+	{
+		for (int xiaoma = 0; xiaoma <= 100; xiaoma++)
+		{
+			for (int majv = 0; majv <= 100; majv++)
+			{
+				if ((dama + xiaoma + majv == 100) && (dama * 3 + xiaoma * 2 + majv * 0.5 == 100))
+				{
+					printf("%d\t%d\t%d\n", dama, xiaoma, majv);
+				}
+			}
+		}
+	}
+}
+*/
