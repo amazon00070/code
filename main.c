@@ -407,3 +407,27 @@ void main(void)
 	}
 }
 */
+/*
+//合数分解为质数
+#include <stdio.h>
+void main(void)
+{
+	int k = 10000;
+	printf("%d=", k);
+	for (int i = 2; i <= k; i++)
+	{
+		if ((k % i == 0))
+		{
+			k = k / i;
+			printf("%d*", i);
+			i = 1;
+		}
+		else
+		{
+
+		}
+	}
+	printf("\b\t");
+	printf("\n");
+}
+*/
