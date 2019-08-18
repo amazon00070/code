@@ -438,3 +438,42 @@ void main(void)
 	printf("\n");
 }
 */
+/*
+//求最小公倍数和最大公约数
+#include <stdio.h>
+void main(void)
+{
+	int a = 70, b = 15, c;
+	if (a >= b)
+	{
+
+	}
+	else
+	{
+		c = a;
+		a = b;
+		b = c;
+	}
+	for (int i = a; i <= a * b; i++)
+	{
+		if (i % a == 0 && i % b == 0)
+		{
+			printf("%d\n", i);
+			break;
+		}
+		else
+		{
+
+		}
+	}
+
+	while (b != 0)
+	{
+		int mid;
+		mid = a % b;
+		a = b;
+		b = mid;
+	}
+	printf("%d", a);
+}
+*/
