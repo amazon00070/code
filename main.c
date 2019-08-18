@@ -528,3 +528,25 @@ int huiwen(int m)
 	}
 }
 */
+/*
+//检测数字在十进制下的位数
+#include <stdio.h>
+void main(void)
+{
+	printf("%d", weishu(-2345));
+}
+int weishu(int m)
+{
+	for (int i = 1; i < 1000; i++)
+	{
+		if (m / 10 == 0)
+		{
+			return i;
+		}
+		else
+		{
+			m = m / 10;
+		}
+	}
+}
+*/
