@@ -550,3 +550,85 @@ int weishu(int m)
 	}
 }
 */
+/*
+//打印回文素数
+#include <stdio.h>
+void main(void)
+{
+	int sum = 0;
+	for (int i = 999999; i < 10000000; i++)
+	{
+		if (huiwen(i) && zhishu(i))
+		{
+			printf("%10d\n", i);
+			sum++;
+		}
+		else
+		{
+
+		}
+	}
+	printf("回文质数个数为%d\n", sum);//来自网络的答案，两位回文素数1个，三位回文素数15个，五位回文素数93个，七位回文素数668个，九位回文素数5172个。
+}
+int weishu(int m)
+{
+	for (int i = 1; i < 1000; i++)
+	{
+		if (m / 10 == 0)
+		{
+			return i;
+		}
+		else
+		{
+			m = m / 10;
+		}
+	}
+}
+int huiwen(int m)
+{
+	int wei, flag = 0;
+	wei = weishu(m);
+	for (int i = 1; i <= wei / 2; i++)
+	{
+		int pow1, pow2;
+		pow1 = pow(10, i);
+		pow2 = pow(10, wei + 1 - i);
+		if (((m % pow1) / pow(10, (i - 1))) == ((m % pow2) / pow(10, (wei + 1 - i - 1))))
+		{
+			flag = 1;
+		}
+		else
+		{
+			flag = 0;
+			break;
+		}
+	}
+	return flag;
+}
+int pow(int m, int n)
+{
+	int result = 1;
+	for (int i = 0; i < n; i++)
+	{
+		result = result * m;
+	}
+	return result;
+}
+int zhishu(int m)
+{
+	int flag = 0;
+	for (int i = 2; i < m; i++)
+	{
+		if (m % i == 0)
+		{
+			flag = 0;
+			break;
+		}
+		else
+		{
+			flag = 1;
+		}
+	}
+	return flag;
+}
+*/
