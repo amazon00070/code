@@ -477,3 +477,54 @@ void main(void)
 	printf("%d", a);
 }
 */
+/*
+//显示100-1000之间的回文素数
+#include <stdio.h>
+int zhishu(int m);
+int huiwen(int m);
+void main(void)
+{
+	for (int i = 100; i < 1000; i++)
+	{
+		if ((zhishu(i)==1)&& (huiwen(i) == 1))
+		{
+			printf("%d\n", i);
+			sum = sum + i;
+		}
+		else
+		{
+
+		}
+	}
+}
+//检测质数，如果返回1则为质数
+int zhishu(int m)
+{
+	int flag;
+	for (int i = 2; i < m; i++)
+	{		
+		if (m % i == 0)
+		{
+			flag = 0;
+			break;
+		}
+		else
+		{
+			flag = 1;
+		}
+	}
+	return flag;
+}
+//检测回文数
+int huiwen(int m)
+{
+	if ((m % 10) == (m / 100))
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+*/
