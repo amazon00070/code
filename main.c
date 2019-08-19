@@ -632,3 +632,19 @@ int zhishu(int m)
 	return flag;
 }
 */
+/*
+//输出a+aa+aaa+aaaa
+#include <stdio.h>
+#include <math.h>
+void main(void)
+{
+	int sum = 0, n = 1, l = 7, num = 0;
+	for (int i = 0; i < l; i++)
+	{
+		num = num + n * (pow(10, i));
+		printf("%d\n", num);
+		sum = sum + num;
+	}
+	printf("%d", sum);
+}
+*/
