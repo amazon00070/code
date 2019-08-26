@@ -648,3 +648,41 @@ void main(void)
 	printf("%d", sum);
 }
 */
+
+/*
+//用函数操作数组
+#include <stdio.h>
+void maopao(int a[], int l);
+void main(void)
+{
+	int s[5] = { 232,123,121,424,542 };
+	maopao(s, 5);
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d\t", s[i]);
+	}
+	printf("\n");
+	int kkkk[255] = { 1,5,3,6,2,4,7 };
+	maopao(kkkk, 7);
+	for (int i = 0; i < 7; i++)
+	{
+		printf("%d\t", kkkk[i]);
+	}
+}
+void maopao(int a[], int l)
+{
+	for (int j = 0; j < l - 1; j++)
+	{
+		for (int i = 0; i < l - 1 - j; i++)
+		{
+			int mid;
+			if (a[i] > a[i + 1])
+			{
+				mid = a[i + 1];
+				a[i + 1] = a[i];
+				a[i] = mid;
+			}
+		}
+	}
+}
+*/
