@@ -686,3 +686,19 @@ void maopao(int a[], int l)
 	}
 }
 */
+/*
+//不利用第三个变量进行两数交换
+#include <stdio.h>
+void shuzu(int queyangleba[]);
+void main(void)
+{
+	int a = 3, b = 5;
+	printf("%d\t", a);
+	printf("%d\n", b);
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+	printf("%d\t", a);
+	printf("%d\n", b);
+}
+*/
