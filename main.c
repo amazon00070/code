@@ -863,3 +863,53 @@ int main()  //主函数
 	return 0;
 }
 */
+/*
+//利用宏和函数实现数组交换
+#include<stdio.h>
+#define SIZE(a) sizeof(a)/sizeof(a[0])
+#define PRINT_ARR(a) print_arr(a, SIZE(a))
+#define EXCHANGE_ARR(b,c) exchange_arr(b,c,SIZE(b))
+void exchange_arr(int b[], int c[], int l);
+void print_arr(int b[], int l);
+void main()
+{
+	int x[5] = { 0,1,2,3,4 };
+	int y[5] = { 10,11,12,13,14 };
+	printf("原数组\n");
+	printf("x:\t");
+	PRINT_ARR(x);
+	printf("y:\t");
+	PRINT_ARR(y);
+	EXCHANGE_ARR(x, y);
+	printf("新数组\n");
+	printf("x:\t");
+	PRINT_ARR(x);
+	printf("y:\t");
+	PRINT_ARR(y);
+}
+void exchange_arr(int b[], int c[], int l)
+{
+	int mid;
+	for (int i = 0; i < l; i++)
+	{
+		mid = b[i];
+		b[i] = c[i];
+		c[i] = mid;
+	}
+}
+void print_arr(int b[], int l)
+{
+	for (int j = 0; j < l; j++)
+	{
+		printf("%d", b[j]);
+		if (j == l - 1)
+		{
+			printf("\n");
+		}
+		else
+		{
+			printf("\t");
+		}
+	}
+}
+*/
