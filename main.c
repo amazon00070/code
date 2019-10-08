@@ -913,3 +913,110 @@ void print_arr(int b[], int l)
 	}
 }
 */
+/*
+//申请临时内存当作数组使用
+#include<stdio.h>
+#include <malloc.h>
+
+#define EXCHANGE_INT(a,b) exchange_int(&a,&b)//将指针写法替换
+#define SIZE_ARR(a) (sizeof(a) / sizeof(a[0]))//将求数组长度写法替换
+#define PAIXV_ARR(a) paixu(a, SIZE_ARR(a))//简化排序函数的形参
+#define NIXV_ARR(a) nixv_arr(a, SIZE_ARR(a))//简化逆序函数的形参
+#define PRINT_ARR(a,b) print_arr(a, SIZE_ARR(a),b)//简化输出数组函数的形参
+
+void exchange_int(int* a, int* b);
+void paixu(int a[], int l);
+void print_arr(int a[], int l, int line);
+void nixv_arr(int a[], int l);
+void fuzhi_arr(int a[], int b[], int l);
+
+void main(void)
+{
+	int x[10] = { 9,3,2,5,4,6,7,1,0,8 };
+	int* p, * k;
+	p = (int*)malloc(10 * sizeof(int));
+	fuzhi_arr(x, p, 10);
+	//p = (int*)malloc(40);
+	//p[0] = 1;//后面就和正常的数组使用一样
+	//p[1] = p[0] + 2;
+	//p = (int*)realloc(p, 20); //假设变成了20，再通过realloc来重新定义数组大小
+	//free(p);//当内存不再使用时，应使用free()函数将内存块释放
+	print_arr(x, 10, 5);
+	print_arr(p, 10, 5);
+	paixu(p, 10);
+	print_arr(p, 10, 5);
+	nixv_arr(p, 10);
+	print_arr(p, 10, 5);
+	free(p);
+	print_arr(p, 10, 5);
+	k = (int*)malloc(40);
+	for (int i = 0; i < 10; i++)
+	{
+		k[i] = i*i;
+	}
+	print_arr(k, 10, 5);
+	print_arr(p, 10, 5);
+
+
+
+
+
+	//PAIXV_ARR(p);
+	//PRINT_ARR(p, 4);
+	//NIXV_ARR(p);
+	//printf("\n");
+	//PRINT_ARR(p, 4);
+}
+void exchange_int(int* a, int* b)//将int的指针赋值进去进行交换
+{
+	float m;
+	m = *a;
+	*a = *b;
+	*b = m;
+	//*a = *a ^ *b;
+	//*b = *a ^ *b;
+	//*a = *a ^ *b;
+}
+void print_arr(int a[], int l, int line)//输出数组，到每行line个长度
+{
+	for (int i = 1; i <= l; i++)
+	{
+		printf("%d", a[i - 1]);
+		if (i % line)
+		{
+			printf("\t");
+		}
+		else
+		{
+			printf("\n");
+		}
+	}
+}
+void paixu(int a[], int l)//对数组进行由大到小的排序
+{
+	for (int i = 0; i < l - 1; i++)
+	{
+		for (int j = 0; j < l - 1 - i; j++)
+		{
+			if (a[j] < a[j + 1])
+			{
+				EXCHANGE_INT(a[j], a[j + 1]);
+			}
+		}
+	}
+}
+void nixv_arr(int a[], int l)//逆序数组
+{
+	for (int i = 0; i < l / 2; i++)
+	{
+		EXCHANGE_INT(a[i], a[l - i - 1]);
+	}
+}
+void fuzhi_arr(int a[], int b[], int l)
+{
+	for (int i = 0; i < l; i++)
+	{
+		b[i] = a[i];
+	}
+}
+*/
