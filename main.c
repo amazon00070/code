@@ -1020,3 +1020,31 @@ void fuzhi_arr(int a[], int b[], int l)
 	}
 }
 */
+/*
+//结构体练习
+#include <stdio.h>
+struct Mystruct
+{
+	char  title[50];
+	int   id;
+};
+void printBook(struct Mystruct book);
+void main()
+{
+	struct Mystruct bo[20] =
+	{
+		"结构1",123,
+		"结构2",456,
+		"结构3",789
+	};
+	for (size_t i = 0; i < 5; i++)
+	{
+		printBook(bo[i]);
+	}	
+}
+void printBook(struct Mystruct in)
+{
+	printf("title is: %s\t", in.title);
+	printf("id_is : %d\n", in.id);
+}
+*/
