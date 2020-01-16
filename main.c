@@ -86,41 +86,45 @@ void main(void)
 
 /************
 //寻找质数
-#include <stdio.h>
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<math.h>
+int zhishu(int a);
 void main(void)
 {
-	int b = 0;
-	printf("2\n");
-	printf("3\n");
-	printf("5\n");
-	printf("7\n");
-	for (int i = 10; i < 100; i++)
+	int x=0;
+	for (int i = -100; i < 1000000; i++)
 	{
-		int a = 0;
-		for (int j = 2; j <= i / 2; j++)
+		if (zhishu(i) == 1)
 		{
-			
-			if (i % j == 0)
+			printf("%d\n", i);
+			x++;
+			if (x == 10000)
 			{
-				a = 1;
 				break;
 			}
-			else
-			{
-
-			}
-		}
-		if (a == 0)
-		{
-			printf("%d\n",i);
-			b++;
-		}
-		else
-		{
-
 		}
 	}
-	printf("共%d个\n", b);
+	printf("%d", x);
+}
+int zhishu(int a)
+{
+	if (a <= 1)
+	{
+		return(0);//0为非质数
+	}
+	if (a == 2 | a == 3)
+	{
+		return(1);
+	}
+	for (int i = pow(a, 0.5); i < a; i++)
+	{
+		if (a % i == 0)
+		{
+			return(0);
+		}
+	}
+	return(1);
 }
 *************/
 
