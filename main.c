@@ -1048,3 +1048,44 @@ void printBook(struct Mystruct in)
 	printf("id_is : %d\n", in.id);
 }
 */
+/*
+#pragma warning(disable:4996)
+#include<stdio.h>
+void TxtWrite(FILE* a, char c[], int l);
+void TxtGet(FILE* a, char k[], int l);
+FILE* p_r = NULL, * p_w = NULL;
+int k[1024];
+void run()
+{
+	TxtGet(p_r, k, 2);
+	TxtWrite(p_w, k, 1);
+}
+void main(void)
+{
+	p_w = fopen("test12138.txt", "w");
+	p_r = fopen("test.txt", "r");
+	
+	for (int i = 0; i < 50000; i++)
+	{
+		run();
+	}
+	fclose(p_w);
+	fclose(p_r);
+}
+
+
+
+
+
+void TxtWrite(FILE* a, char k[], int l)
+{
+	for (int i = 0; i < l; i++)
+	{
+		fprintf(a, "%c", k[i]);
+	}
+}
+void TxtGet(FILE* a, char k[], int l)
+{
+	fgets(k, l, a);
+}
+*/
