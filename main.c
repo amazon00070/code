@@ -1093,3 +1093,50 @@ void TxtGet(FILE* a, char k[], int l)
 	fgets(k, l, a);
 }
 */
+
+
+
+/*
+//寻找和最大的子集
+#include<stdio.h>
+int zuidaziji(int a[], int lenth, int* ini, int* final);
+void main(void)
+{
+	int aaa[] = { 7,-8,9,-11,2,-3,7,-8,9,-70,9,-4,5,-6,-7,8,-9,1,-5 };
+	int ini = 1, final = 1;
+	printf("%d\n", zuidaziji(aaa, sizeof(aaa) / sizeof(aaa[0]), &ini, &final));
+	printf("%d,%d\n", ini, final);
+	for (int i = ini - 1; i < final; i++)
+	{
+		printf("%d,", aaa[i]);
+	}
+	printf("\b");
+}
+int zuidaziji(int a[], int lenth, int* ini, int* final)
+{
+	int sum_now = 0, max_now = 0, p = 1;
+	for (int i = 0; i < lenth; i++)
+	{
+		if (a[i] < 0)
+		{
+			max_now = max_now + a[i];
+		}
+	}
+	for (int i = 0; i < lenth; i++)
+	{
+		sum_now = sum_now + a[i];
+		if (sum_now > max_now)
+		{
+			max_now = sum_now;
+			*final = i + 1;
+			*ini = p;
+		}
+		if (sum_now < 0)
+		{
+			sum_now = 0;
+			p = i + 2;
+		}
+	}
+	return max_now;
+}
+*/
